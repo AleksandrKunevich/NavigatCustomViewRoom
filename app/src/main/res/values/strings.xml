@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">NavigatCustomViewRoom</string>
+    <string name="date">Date</string>
+    <string name="author">Author</string>
+    <string name="title">Title</string>
+    <string name="confirm">Confirm</string>
+    <string name="chose_filter">Chose filter</string>
+</resources>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph_navig"
+    app:startDestination="@id/newsFragment">
+
+    <fragment
+        android:id="@+id/newsFragment"
+        android:name="com.example.navigatcustomviewroom.presentation.fragment.NewsFragment"
+        android:label="news_fragment"
+        tools:layout="@layout/news_fragment">
+        <action
+            android:id="@+id/action_newsFragment_to_choseFilterFragment"
+            app:destination="@id/choseFilterFragment" />
+
+        <argument
+            android:name="news_data"
+            app:argType="com.example.navigatcustomviewroom.domain.DataN"
+            app:nullable="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/choseFilterFragment"
+        android:name="com.example.navigatcustomviewroom.presentation.fragment.ChoseFilterFragment"
+        android:label="chose_filter_fragment"
+        tools:layout="@layout/chose_filter_fragment">
+
+        <argument
+            android:name="news_data"
+            app:argType="com.example.navigatcustomviewroom.domain.DataN"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_choseFilterFragment_to_newsFragment"
+            app:destination="@id/newsFragment" />
+    </fragment>
+
+<!--    <fragment-->
+<!--        android:id="@+id/sortedFragment"-->
+<!--        android:name="com.example.navigatcustomviewroom.presentation.fragment.SortedFragment"-->
+<!--        android:label="SortedFragment"-->
+<!--        tools:layout="@layout/sortedd_fragment">-->
+
+<!--        <action-->
+<!--            android:id="@+id/action_sortedFragment_to_choseFilterFragment"-->
+<!--            app:destination="@id/choseFilterFragment" />-->
+
+<!--        <argument-->
+<!--            android:name="news_data"-->
+<!--            app:argType="com.example.navigatcustomviewroom.domain.DataN"-->
+<!--            app:nullable="true" />-->
+
+<!--    </fragment>-->
+
+</navigation>
